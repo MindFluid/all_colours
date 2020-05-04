@@ -13,6 +13,7 @@ let current;
 let stack = []; //for backtracking algorithm
 
 let button;
+saveData = 0;
 
 //setup() is a p5.js function which runs only once when the page is loaded
 function setup() {
@@ -147,6 +148,8 @@ function generate() {
 	colours = [];
 }
 
+//crudely increment filename for saving images
 function doubleClicked() {
-	save("allcolours_.png");
+	save("allcolours_" + saveData + ".png");
+	saveData++;
 }
