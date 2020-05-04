@@ -86,6 +86,7 @@ function Cell(i, j) {
 			neighbours.push(bottomLeft);
 		}
 
+		//if the array of neighbours is not empty, randomly select one
 		if (neighbours.length > 0) {
 			let r = floor(random(0, neighbours.length));
 			return neighbours[r];
@@ -94,6 +95,7 @@ function Cell(i, j) {
 		}
 	};
 
+	//calculates relative x,y position in a 1d array
 	function index(i, j) {
 		if (i < 0 || j < 0 || i > width - 1 || j > height - 1) {
 			return -1;
